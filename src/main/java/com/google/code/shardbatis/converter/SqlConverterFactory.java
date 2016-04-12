@@ -12,6 +12,7 @@ import net.sf.jsqlparser.parser.CCJSqlParserManager;
 import net.sf.jsqlparser.statement.Statement;
 import net.sf.jsqlparser.statement.delete.Delete;
 import net.sf.jsqlparser.statement.insert.Insert;
+import net.sf.jsqlparser.statement.replace.Replace;
 import net.sf.jsqlparser.statement.select.Select;
 import net.sf.jsqlparser.statement.update.Update;
 
@@ -51,6 +52,7 @@ public class SqlConverterFactory {
 		converterMap.put(Insert.class.getName(), new InsertSqlConverter());
 		converterMap.put(Update.class.getName(), new UpdateSqlConverter());
 		converterMap.put(Delete.class.getName(), new DeleteSqlConverter());
+		converterMap.put(Replace.class.getName(),new ReplaceSqlConverter());
 	}
 	
 	/**
